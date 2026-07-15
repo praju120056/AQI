@@ -2,8 +2,8 @@
 
 ## Clone the repo
 
-git clone [https://github.com/PraneethUpadhya195/AQI-Detector](https://github.com/PraneethUpadhya195/AQI-Detector)<br>
-cd your-repo-name
+git clone [https://github.com/praju120056/AQI](https://github.com/praju120056/AQI)<br>
+cd AQI
 
 ## Install requirements
 
