@@ -1,0 +1,147 @@
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif !important;
+    background: radial-gradient(circle at top left, #1b2735 0%, #090a0f 100%) !important;
+    color: #e0e0e0 !important;
+    min-height: 100vh;
+}
+
+/* --- GLASS CARD STYLING --- */
+.glass-card {
+    background: rgba(20, 20, 20, 0.7) !important; /* Made slightly darker for better readability */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 16px !important;
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Header Text */
+.card-header {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Stats Value Styling */
+.stat-value {
+    background: -webkit-linear-gradient(45deg, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+    font-weight: 600;
+    z-index: 5; /* Ensure button sits above background elements */
+}
+
+/* --- DROPDOWN FIXES (The Critical Part) --- */
+
+/* 1. Force the dropdown menu to be SOLID Black (No transparency) */
+.Select-menu-outer {
+    background-color: #000000 !important;
+    border: 1px solid #444 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.9) !important;
+    z-index: 9999 !important; /* Force it to float above EVERYTHING */
+    border-radius: 8px !important;
+    margin-top: 5px !important;
+}
+
+/* 2. Style the options inside the dropdown */
+.Select-option {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    padding: 10px !important;
+}
+
+/* 3. Highlight color when you hover over an option */
+.Select-option.is-focused {
+    background-color: #333333 !important;
+    color: #00d2ff !important; /* Neon blue text on hover */
+}
+
+/* 4. The input box itself */
+.Select-control {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+}
+
+/* 5. The text color of the selected item */
+.Select-value-label {
+    color: #ffffff !important;
+}
+
+/* --- FIX: DROPDOWN OVERLAP --- */
+/* This forces the row containing the dropdown to sit ON TOP of the stats cards */
+.controls-row {
+    position: relative !important;
+    z-index: 1050 !important; /* Bootstrap modal is 1055, so this is safe */
+}
+
+/* --- BEAUTIFY TABLE --- */
+.custom-table-card {
+    background: rgba(10, 10, 10, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    overflow: hidden; /* Ensures rows don't spill out of rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.dash-header {
+    background-color: rgba(100, 100, 100, 0.2) !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.dash-cell {
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+    padding: 15px !important;
+}
+
+/* --- FIX: TABLE HOVER VISIBILITY --- */
+/* When hovering over a row, make background white and text black */
+.dash-spreadsheet-container .dash-spreadsheet-inner tr:hover td {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* --- FIX: TABLE HEADERS --- */
+/* Force headers to be black with white text, and prevent them from turning white on hover */
+.dash-spreadsheet-container .dash-spreadsheet-inner th {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    border-bottom: 2px solid #444 !important;
+}
+
+/* --- FIX: GRAPH HOVER TEXT --- */
+/* Make the text inside the hover tooltip BLACK so it is readable on the white background */
+.hovertext text {
+    fill: #000000 !important;       /* Force text to be Black */
+    text-shadow: none !important;    /* Remove shadow for cleaner look */
+    font-weight: 600 !important;     /* Make it slightly bold */
+    font-family: 'Inter', sans-serif !important;
+}

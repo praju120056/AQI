@@ -1,0 +1,22 @@
+Python
+
+pycache/
+*.pyc
+*.pyo
+*.pyd
+
+Virtual Environment
+
+venv/
+.venv/
+
+Secrets
+
+Ignore the file with database and api key credentials
+
+.env
+
+IDE / OS
+
+.DS_Store
+.vscode/
